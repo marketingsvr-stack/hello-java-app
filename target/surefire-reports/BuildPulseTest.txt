@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: BuildPulseTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 1, Skipped: 1, Time elapsed: 5.128 s <<< FAILURE! -- in BuildPulseTest
+BuildPulseTest.flakyTest -- Time elapsed: 0.032 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Random flaky failure
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+	at BuildPulseTest.flakyTest(BuildPulseTest.java:27)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+BuildPulseTest.errorTest -- Time elapsed: 0.009 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "String.length()" because "value" is null
+	at BuildPulseTest.errorTest(BuildPulseTest.java:21)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
+BuildPulseTest.failTest -- Time elapsed: 0.008 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Intentional failure
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
+	at org.junit.jupiter.api.Assertions.fail(Assertions.java:138)
+	at BuildPulseTest.failTest(BuildPulseTest.java:15)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+
