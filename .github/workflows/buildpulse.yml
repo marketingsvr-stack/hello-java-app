@@ -1,0 +1,32 @@
+name: BuildPulse Demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Run Tests
+        run: mvn clean test
+
+      - name: Upload Test Results To BuildPulse
+        if: always()
+        uses: BuildPulseLLC/test-reporter-action@v3
+        with:
+          api-token: ${{ secrets.bp_5a3fdbf3e68e2c6f9f322a280777b4df1a7b5bf423004ec5c31f118e0046b9f0 }}
+          path: target/surefire-reports/*.xml
