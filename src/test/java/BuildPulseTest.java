@@ -9,17 +9,17 @@ public class BuildPulseTest {
     void passTest() {
         assertTrue(true);
     }
+//
+//    @Test
+//    void failTest() {
+//        fail("Intentional failure");
+//    }
 
-    @Test
-    void failTest() {
-        fail("Intentional failure");
-    }
-
-    @Test
-    void errorTest() {
-        String value = null;
-        value.length(); // NullPointerException
-    }
+//    @Test
+//    void errorTest() {
+//        String value = null;
+//        value.length(); // NullPointerException
+//    }
 
     @Test
     void flakyTest() {
@@ -28,11 +28,11 @@ public class BuildPulseTest {
         }
     }
 
-    @Disabled("Intentional skip for CI Visibility")
-    @Test
-    void skippedTest() {
-        assertTrue(false);
-    }
+//    @Disabled("Intentional skip for CI Visibility")
+//    @Test
+//    void skippedTest() {
+//        assertTrue(false);
+//    }
 
     @Test
     void slowTest() throws Exception {
