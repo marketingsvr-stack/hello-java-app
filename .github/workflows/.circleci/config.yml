@@ -1,0 +1,28 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/go:1.22
+    steps:
+      - checkout
+      - run:
+          name: Build App
+          command: go build ./...
+
+  test:
+    docker:
+      - image: cimg/go:1.22
+    steps:
+      - checkout
+      - run:
+          name: Run Tests
+          command: go test ./...
+
+workflows:
+  ci-workflow:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
