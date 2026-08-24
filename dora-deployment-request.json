@@ -1,0 +1,17 @@
+﻿{
+    "data":  {
+                 "type":  "dora_deployment",
+                 "attributes":  {
+                                    "version":  "jenkins-build-59",
+                                    "service":  "jenkins-dora-test",
+                                    "started_at":  1787553567,
+                                    "finished_at":  1787553568,
+                                    "custom_tags":  [
+                                                        "source:jenkins",
+                                                        "pipeline:datadog-DORA-Metrics-test",
+                                                        "build:59"
+                                                    ],
+                                    "env":  "test"
+                                }
+             }
+}

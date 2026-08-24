@@ -1,0 +1,15 @@
+{
+  "data": {
+    "attributes": {
+      "service": "datadog-dora-test-service",
+      "env": "prod",
+      "started_at": 1787566280000,
+      "finished_at": 1787566290000,
+      "version": "direct-api-test-81",
+      "git": {
+        "repository_url": "https://github.com/marketingsvr-stack/hello-java-app.git",
+        "commit_sha": "392c683c6a662881a18b1387181c69460a5db14a"
+      }
+    }
+  }
+}
